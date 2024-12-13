@@ -1,0 +1,8 @@
+<div class="font-sans p-4 mx-auto lg:max-w-5xl md:max-w-3xl sm:max-w-full">
+    <h2 class="text-4xl font-extrabold text-gray-800 mt-2 mb-12">All Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"  >
+        @for (item of products; track $index) {
+          <app-productitems  [products]="item"(viewProduct)="productView($event)"  ></app-productitems>
+        }
+     </div>
+  </div>
